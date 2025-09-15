@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+body {
+
+    display:flex;
+    justify-content:center;  /*conteudo centralizado*/
+    align-items: center;
+    min-height: 100dvh;      /* altura minima do body (tela toda)vh*   -   dinamic view high */
+    background: url('/assets/bckg4.png'); /* link da imagem de backgorund*/
+    background-size: cover;  /*tamanho do background (ocupando toda a tela)*/
+    background-position: center;
+}
+
+
+.container { /* edição da classe .container*/    
+
+    width:400px; 
+    background-color: rgba(245, 227, 142, .1);
+    border: 2px solid  rgba(255,255,255,.2);  /*cor rgba permite declarar a opacidade (.2)*/
+    border-radius: 10px;
+    color:#fff;
+    padding: 30px 40px;  /* magerm horizontal | margem vertical */
+    box-shadow: 0 0 10px rgba(0,0,0,.2);  /* sombreamento da box */
+    backdrop-filter: blur(1px);  /* deixa o fundo borrado */
+}
+
+.container h1{
+
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+    
+}
+
+.input-box input{
+
+    width:100%;
+    height:100%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color:#fff;
+    padding: 20px 45px 20px 20px; /*em cima, direita, baixo, esquerda*/
+
+}
+
+.input-box input::placeholder{   /*acessando o placeholder dentro do input na classe input-box*/
+
+    color:#C5C5C5;
+
+}
+
+.input-box i{  /*ícone*/
+
+    position: absolute;  /*ponto especifico, em relação ao input-box que tem position relative*/
+    right: 20px;  /*vai todo p direita e volta 20 px*/
+    top:50%;   /*encontra o meio e o item começa no meio*/
+    transform: translateY(-50%);  /*Alinha o meio do ícone com o meio da altura.*/
+    font-size: 20px;
+
+}
+
+.remember-forgot {      /*  CORRIGIR */
+
+    display:flex;
+    justify-content: space-between;  /*Separa os elementos internos*/
+    margin: -15px 0 15px;   /*em cima, lados, em baixo*/     /*CORRIGIR*/
+
+}
+
+.remember-forgot label input{   /*classe(remember-forgot) -> <label>   ->   <input>*/
+
+    accent-color: #fff;  /*mudar cor do checkbox*/
+    margin-right:5px;
+}
+
+.remember-forgot a {
+    text-decoration:none;
+    color: #fff;
+
+}
+
+.remember-forgot a:hover {  /*somente o momento em que o mouse está sobre o <a> (pairar) */
+
+    text-decoration:underline;
+}
+
+.login {
+
+    width:100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;   /*mãozinho do mouse*/
+    font-size:16px;
+    color: #333;
+    font-weight:600;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.login:hover {
+
+    background-color: transparent;
+    text-decoration: underline;
+    border: 2px solid rgba(255,255,255, .2);
+    color: #fff;
+    transition:0.2s;  /* definir o tempo para a mudança*/
+
+}
+
+.register-link{
+
+    margin:20px 0 15px;
+    font-size: 14px;
+    text-align: center; 
+
+}
+
+.register-link a {
+
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.register-link a:hover {
+
+    text-decoration: underline;
+}
